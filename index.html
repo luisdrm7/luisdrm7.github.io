@@ -1,0 +1,552 @@
+Tú dijiste:
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Left 4 Dead: Historia</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #eee;
+    }
+
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 220px;
+      height: 100vh;
+      background: linear-gradient(180deg, #0a3000 0%, #001500 100%);
+      border-right: 3px solid #0f0;
+      box-shadow: 0 0 10px #0f0;
+      display: flex;
+      flex-direction: column;
+      padding-top: 30px;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #4caf50;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.8em;
+      text-shadow: 0 0 10px #0f0;
+    }
+
+    .menu-item {
+      padding: 15px 20px;
+      color: #0f0;
+      text-decoration: none;
+      border-left: 4px solid transparent;
+      transition: all 0.3s ease;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .menu-item:hover {
+      background-color: #0f0;
+      color: #000;
+      border-left: 4px solid #4caf50;
+      box-shadow: 0 0 15px #4caf50;
+    }
+
+    .menu-item::before {
+      content: "🧟";
+      margin-right: 10px;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      opacity: 0.6;
+    }
+
+    .menu-item:hover::before {
+      opacity: 1;
+      filter: drop-shadow(0 0 5px #4caf50);
+    }
+
+    header {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      margin-left: 220px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #4caf50;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      margin-left: 240px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      color: #4caf50;
+    }
+
+    footer {
+      background-color: #222;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+      color: #aaa;
+      margin-left: 220px;
+    }
+
+    /* Estilos para personajes integrados */
+
+    /* Container personajes */
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .survivor {
+      background-color: #222;
+      border: 1px solid #444;
+      border-radius: 8px;
+      width: 200px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+      transition: transform 0.2s ease;
+    }
+
+    .survivor:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.9);
+    }
+
+    .survivor img {
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid #444;
+      border-radius: 8px 8px 0 0;
+      display: block;
+    }
+
+    .survivor h2 {
+      font-size: 1.2em;
+      margin: 15px 0 10px;
+      color: #4caf50;
+    }
+
+    .survivor p {
+      padding: 0 15px 15px;
+      font-size: 0.9em;
+      line-height: 1.3;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="sidebar">
+    <h2>LEFT 4 DEAD</h2>
+    <a class="menu-item" onclick="showSection('inicio')">Inicio</a>
+    <a class="menu-item" onclick="showSection('personajes')">Personajes</a>
+    <a class="menu-item" onclick="showSection('infectados')">infectados</a>
+    <a class="menu-item" onclick="showSection('armas')">Armas</a>
+    
+  </nav>
+
+  <header>
+    <h1>Left 4 Dead: El Origen del Juego</h1>
+  </header>
+
+  <!-- Sección Inicio -->
+  <main id="inicio" >
+    <section>
+      <h2>Inicio del Proyecto</h2>
+      <p>Left 4 Dead comenzó su desarrollo a mediados de la década de 2000 por la compañía Turtle Rock Studios, quienes inicialmente trabajaban de forma independiente antes de ser adquiridos por Valve Corporation. El objetivo del proyecto era crear un juego cooperativo de disparos con un fuerte énfasis en la supervivencia en equipo.</p>
+    </section>
+
+    <section>
+      <h2>Colaboración con Valve</h2>
+      <p>Durante el desarrollo, Valve notó el potencial del juego y decidió colaborar más estrechamente con Turtle Rock. Posteriormente, en 2008, Valve adquirió oficialmente el estudio. Esta alianza permitió mejorar el motor gráfico Source, así como implementar una inteligencia artificial dinámica llamada "Director", que ajustaba la dificultad y los eventos según el desempeño del jugador.</p>
+    </section>
+
+    <section>
+      <h2>Lanzamiento y Recepción</h2>
+      <p>Left 4 Dead fue lanzado el 17 de noviembre de 2008 para PC y Xbox 360. Fue aclamado por su innovación en el juego cooperativo, su atmósfera tensa y su rejugabilidad. El juego se convirtió rápidamente en un éxito comercial y de crítica, dando paso a una secuela al año siguiente.</p>
+    </section>
+
+    <section>
+      <h2>Legado</h2>
+      <p>La fórmula de Left 4 Dead ha influenciado numerosos títulos posteriores en el género de disparos cooperativos. A pesar de no haber una tercera entrega oficial, su comunidad sigue activa y el juego continúa siendo un referente en juegos de supervivencia multijugador.</p>
+    </section>
+  </main>
+
+
+
+
+  <!-- Sección Personajes (oculta inicialmente) -->
+  <main id="personajes" class="hidden">
+    <h1>Información de Left 4 Dead 1 y 2</h1>
+
+    <div class="container">
+      <div class="survivor">
+        <img src="imagen/nick.jpg" alt="Nick" />
+        <h2>Nick</h2>
+        <p>Nick es un personaje de <em>Left 4 Dead 2</em>, un estafador y ladrón de poca moral. Aunque su actitud puede parecer fría y egoísta, se une al grupo de supervivientes por necesidad.</p>
+      </div>
+
+      <div class="survivor">
+        <img src="imagen/coach.jpg" alt="Coach" />
+        <h2>Coach</h2>
+        <p>Coach es un hombre robusto y un líder natural del grupo. Es ex-entrenador de fútbol y es conocido por su gran fuerza y capacidad para motivar a los demás.</p>
+      </div>
+
+      <div class="survivor">
+        <img src="imagen/ellis.jpg" alt="Ellis" />
+        <h2>Ellis</h2>
+        <p>Ellis es un joven mecánico optimista y de buen corazón. Siempre intenta mantener el ánimo del grupo alto, a pesar de la grave situación que enfrentan.</p>
+      </div>
+
+      <div class="survivor">
+        <img src="imagen/rochelle.jpg" alt="Rochelle" />
+        <h2>Rochelle</h2>
+        <p>Rochelle es una periodista que lucha por sobrevivir en el apocalipsis. Es valiente y pragmática, y tiene una fuerte personalidad que la hace destacar en momentos difíciles.</p>
+      </div>
+
+      <div class="survivor">
+        <img src="imagen/bill.jpg" alt="Bill" />
+        <h2>Bill</h2>
+        <p>Bill es un veterano de guerra, un hombre de gran experiencia. Se une a los supervivientes de <em>Left 4 Dead 1</em> debido a su sentido de la responsabilidad y su deseo de proteger a los demás.</p>
+      </div>
+
+      <div class="survivor">
+        <img src="imagen/francis.jpg" alt="Francis" />
+        <h2>Francis</h2>
+        <p>Francis es un motero que destaca por su actitud pesimista y su amor por las motocicletas. A pesar de su exterior rudo, es un miembro clave en la lucha por sobrevivir.</p>
+      </div>
+
+      <div class="survivor">
+        <img src="imagen/louis.jpg" alt="Louis" />
+        <h2>Louis</h2>
+        <p>Louis es un trabajador de oficina que se ve arrastrado a la lucha por su vida tras el apocalipsis. Es inteligente y se convierte en un pilar del equipo gracias a su capacidad de adaptación.</p>
+      </div>
+
+      <div class="survivor">
+        <img src="imagen/zoey.jpg" alt="Zoey" />
+        <h2>Zoey</h2>
+        <p>Zoey es una joven que lucha por sobrevivir en el mundo devastado de <em>Left 4 Dead 1</em>. Es valiente, inteligente y tiene una gran capacidad para liderar cuando es necesario.</p>
+      </div>
+    </div>
+  </main>
+
+
+
+
+<main id="infectados" class="hidden">
+  <header>
+    <h1>Tipos de Infectados</h1>
+  </header>
+
+  <section>
+    <h2>Información general</h2>
+    <p>Tenemos 8 tipos de infectados especiales en el juego. 7 de ellos se pueden controlar y uno de ellos solo se puede alterar con movimientos.</p>
+    <p>Los infectados controlables son: Charger, Hunter, Spitter, Jockey, Tank, Smoker y Boomer. La Witch no es controlable por jugadores.</p>
+    <img src="imagen/infectados.jpg" alt="Imagen de infectados">
+  </section>
+
+  <section>
+    <h3>CHARGER</h3>
+      <img src="imagen/charger.jpg" alt="Imagen de Charger">
+    <h2>Especie - Humano infectado</h2>
+    <h2>Sexo - Masculino</h2>
+    <h2>Salud - 600</h2>
+    <h2>Habilidades - Carga contra los supervivientes enganchando a uno y lanzando a los demás por los aires</h2>
+    <h2>Ataques - Puño, cargar contra los supervivientes y golpear a uno contra el suelo consecutivamente</h2>
+    <h2>Motes - Un brazo, gran brazo, paleto, el mono, la cosa que carga, el bicho que embiste, manco</h2>
+  </section>
+
+  <section>
+    <h3>HUNTER</h3>
+     <img src="imagen/hunter.jpg" alt="Imagen de Hunter">
+    <h2>Especie - Humano infectado</h2>
+    <h2>Sexo - Masculino</h2>
+    <h2>Salud - 250</h2>
+    <h2>Habilidades - Saltar grandes distancias sin lastimarse, impulsarse por las paredes y caer encima de los sobrevivientes para arañarlos</h2>
+    <h2>Ataques - Salto y arañazo</h2>
+    <h2>Motes - Santi panki, saltador, imitador de caballos, spooky hunky, skater boy, spaanki hanky, yonki</h2>
+  </section>
+
+  <section>
+    <h3>SPITTER</h3>
+    <img src="imagen/spitter.jpg" alt="Imagen de Spitter">
+     <h2>Especie - Humana infectada</h2>
+    <h2>Sexo - Femenino</h2>
+    <h2>Salud - 100</h2>
+    <h2>Habilidades - Escupitajo de ácido a distancia</h2>
+    <h2>Ataques - Escupir ácido y arañar</h2>
+    <h2>Motes - Cuellilarga, cuello loco, la puta gorda escupidora, la cosa chiflada escupidora, la cosa asquerosa escupidora, la cosa verde, la mujer chiflada, la puta cuellilarga, el hombre verde, la madre de Nick, la exnovia de Nick, el tío del pringue, la mujer zombi, avestruz</h2>
+  </section>
+
+  <section>
+    <h3>JOCKEY</h3>
+      <img src="imagen/jockey.jpg" alt="Imagen de Jockey">
+    <h2>Especie - Humano infectado</h2>
+    <h2>Sexo - Masculino</h2>
+    <h2>Salud - 325</h2>
+    <h2>Habilidades - Abalanzarse sobre los supervivientes y forzarles a seguir una dirección</h2>
+    <h2>Ataques - Agarre a la espalda, arañazos</h2>
+    <h2>Motes - El jorobado, el pequeño monstruo, el liliputiense, el enanito</h2>
+  </section>
+
+  <section>
+    <h3>TANK</h3>
+   <img src="imagen/tank.jpg" alt="Imagen de Tank">
+    <h2>Especie - Humano infectado</h2>
+    <h2>Sexo - Masculino</h2>
+    <h2>Salud - 3000 (Fácil), 4000 (Normal), 6000 (Enfrentamiento), 8000 (Avanzado), 8000 (Experto), 10000 (Realismo), 12000 (Realismo Experto)</h2>
+    <h2>Habilidades - Fuerza y resistencia sobrehumana</h2>
+    <h2>Ataques - Puñetazo, lanzamiento de roca y propulsión de objetos grandes como coches</h2>
+  </section>
+
+  <section>
+    <h3>SMOKER</h3>
+  <img src="imagen/smoker.jpg" alt="Imagen de Smoker">
+    <h2>Especie - Humano infectado</h2>
+    <h2>Sexo - Masculino</h2>
+    <h2>Salud - 250</h2>
+    <h2>Habilidades - Arrastrar a los supervivientes a distancia con su lengua</h2>
+    <h2>Ataques - Atrapar con su lengua, arañar y emitir una nube de humo al morir</h2>
+    <h2>Motes - El tipo de la lengua, el tipo fumador con la lengua, el tío fumador, lamedor</h2>
+  </section>
+
+  <section>
+    <h3>BOOMER</h3>
+     <img src="imagen/boomer.jpg" alt="Imagen de Boomer">
+    <h2>Especie - Humano infectado</h2>
+    <h2>Sexo - Masculino</h2>
+    <h2>Salud - 50</h2>
+    <h2>Habilidades - Puede cubrir a los supervivientes con bilis, atrayendo a una horda</h2>
+    <h2>Ataques - Vomitar, arañazos, muerte explosiva</h2>
+    <h2>Motes - Vomitador, gordo, bolsa, tío que explota, roly poly, tipo grande, tía Bea</h2>
+  </section>
+
+  <section>
+    <h3>WITCH</h3>
+  <img src="imagen/witch.jpg" alt="Imagen de Witch">
+    <h2>Especie - Humana infectada</h2>
+    <h2>Sexo - Femenino</h2>
+    <h2>Salud - 1000</h2>
+    <h2>Habilidades - Incapacita o mata a un superviviente de un solo golpe; corre más rápido que los demás</h2>
+    <h2>Ataques - Zarpazos</h2>
+    <h2>Motes - La chica llorosa, zorra, la exnovia/exmujer de Nick, la que llora, el infierno</h2>
+  </section>
+</main>
+
+ <!-- Sección Armas (oculta inicialmente) -->
+  <main id="armas" class="hidden">
+    <h1>Armas de Left 4 Dead</h1>
+    <section>
+   <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Left 4 Dead 2 - Armas y Accesorios</title>
+  <style>
+    body {
+      background-color: #0b0b0b;
+      color: #e0e0e0;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid #4caf50;
+    }
+
+    header h1 {
+      color: #66ff66;
+      font-size: 2.4em;
+      margin: 10px 0 5px;
+      text-shadow: 2px 2px #000;
+    }
+
+    .imagen-portada {
+      max-width: 95%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 15px;
+      border: 3px solid #222;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+    }
+
+    .contenido {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .seccion {
+      margin-bottom: 50px;
+    }
+
+    .seccion h2 {
+      color: #4caf50;
+      font-size: 1.8em;
+      border-left: 6px solid #bb2222;
+      padding-left: 10px;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px #000;
+    }
+
+    .item {
+      background-color: #1a1a1a;
+      border-left: 6px solid #bb2222;
+      margin-bottom: 20px;
+      padding: 15px 20px;
+      border-radius: 6px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.5);
+      transition: transform 0.2s ease;
+    }
+
+    .item:hover {
+      transform: scale(1.02);
+    }
+
+    .item h3 {
+      color: #ff4444;
+      margin-top: 0;
+    }
+
+    .item p {
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #777;
+      background-color: #111;
+      border-top: 3px solid #4caf50;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- SECCIÓN 1: Armas cuerpo a cuerpo -->
+  <header>
+    <h1>Left 4 Dead 2 - Armas cuerpo a cuerpo</h1>
+    <img src="imagen/armas de cuerpo.jpg" alt="Armas cuerpo a cuerpo" class="imagen-portada">
+  </header>
+
+  <div class="contenido">
+    <div class="seccion">
+      <h2>Armas cuerpo a cuerpo</h2>
+      <div class="item"><h3>Bate de béisbol</h3><p>Rápido y de buen alcance, ideal para hordas.</p></div>
+      <div class="item"><h3>Sartén</h3><p>Divertida y sonora. Golpes sólidos a corta distancia.</p></div>
+      <div class="item"><h3>Machete</h3><p>Velocidad alta y cortes limpios.</p></div>
+      <div class="item"><h3>Katana</h3><p>Letal, precisa y veloz.</p></div>
+      <div class="item"><h3>Hacha de bombero</h3><p>Gran daño por golpe. Algo lenta.</p></div>
+      <div class="item"><h3>Bate de cricket</h3><p>Ligero y efectivo.</p></div>
+      <div class="item"><h3>Pala</h3><p>Mayor área de impacto.</p></div>
+      <div class="item"><h3>Hacha táctica</h3><p>Balanceada y moderna.</p></div>
+      <div class="item"><h3>Pala de trinchera</h3><p>Compacta y ágil.</p></div>
+      <div class="item"><h3>Guitarra eléctrica</h3><p>Estilo y poder. Lenta pero destructiva.</p></div>
+      <div class="item"><h3>Palo de golf</h3><p>Ideal para ataques rápidos.</p></div>
+      <div class="item"><h3>Llave inglesa</h3><p>Gran daño. Útil contra infectados especiales.</p></div>
+      <div class="item"><h3>Cuchillo de cocina</h3><p>Muy veloz pero poco alcance.</p></div>
+      <div class="item"><h3>Tonfa (porra)</h3><p>Balance defensivo y ofensivo.</p></div>
+      <div class="item"><h3>Brazo protésico</h3><p>Curioso y exclusivo de ciertos modos.</p></div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 2: Arma 1 -->
+  <header>
+    <h1>Left 4 Dead 2 - Arma 1</h1>
+    <img src="imagen/arma 1.jpg" alt="Arma 1" class="imagen-portada">
+  </header>
+
+  <div class="contenido">
+    <div class="seccion">
+      <h2>Armas 1</h2>
+      <div class="item"><h3>Pistola</h3><p>Munición infinita. Pueden usarse en pareja.</p></div>
+      <div class="item"><h3>Magnum</h3><p>Potente y precisa. No necesita recargas frecuentes.</p></div>
+      <div class="item"><h3>Escopeta</h3><p>Gran daño a corta distancia.</p></div>
+      <div class="item"><h3>Escopeta automática</h3><p>Fuego rápido. Ideal en espacios cerrados.</p></div>
+      <div class="item"><h3>SMG</h3><p>Rápida pero daño moderado. Buena para empezar.</p></div>
+      <div class="item"><h3>SMG Silenciada</h3><p>Disparo más controlado, hace menos ruido.</p></div>
+      <div class="item"><h3>Rifle de asalto M16</h3><p>Balance entre velocidad y precisión.</p></div>
+      <div class="item"><h3>AK-47</h3><p>Alta potencia, menos precisión.</p></div>
+      <div class="item"><h3>Rifle SCAR</h3><p>Modo ráfaga, más control.</p></div>
+      <div class="item"><h3>Rifle francotirador</h3><p>Ideal para eliminar enemigos a distancia.</p></div>
+    </div>
+  </div>
+
+  <!-- SECCIÓN 3: Accesorios -->
+  <header>
+    <h1>Left 4 Dead 2 - Accesorios y objetos de apoyo</h1>
+    <img src="imagen/accesorios.jpg" alt="Accesorios del juego" class="imagen-portada">
+  </header>
+
+  <div class="contenido">
+    <div class="seccion">
+      <h2>Accesorios y objetos</h2>
+      <div class="item"><h3>Botiquín</h3><p>Recupera salud completamente.</p></div>
+      <div class="item"><h3>Adrenalina</h3><p>Velocidad aumentada por tiempo limitado.</p></div>
+      <div class="item"><h3>Píldoras</h3><p>Salud temporal. Muy útiles en combate.</p></div>
+      <div class="item"><h3>Desfibrilador</h3><p>Revive a un compañero caído.</p></div>
+      <div class="item"><h3>Molotov</h3><p>Fuego en área. Perfecto para tanks o bloquear caminos.</p></div>
+      <div class="item"><h3>Bomba casera</h3><p>Atrae y luego explota a los infectados.</p></div>
+      <div class="item"><h3>Bilis del Boomer</h3><p>Hace que todos los infectados ataquen al afectado.</p></div>
+    </div>
+  </div>
+
+  <footer>
+    Página creada por un fan de Left 4 Dead 2. No afiliado con Valve Corporation.
+  </footer>
+
+</body>
+</html>
+g
+    </section>
+  </main>
+
+<script>
+    function showSection(section) {
+      const sections = ['inicio', 'personajes', 'infectados', 'armas'];
+      sections.forEach(id => {
+        document.getElementById(id).classList.add('hidden');
+      });
+      document.getElementById(section).classList.remove('hidden');
+    }
+
+    window.onload = () => showSection('inicio');
+  </script>
+</body>
+</html>
